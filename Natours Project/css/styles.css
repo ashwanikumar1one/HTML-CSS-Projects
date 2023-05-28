@@ -1,3 +1,11 @@
+/*
+Light Green : #7ed56f
+Medium Green : #55c57a
+Dark Green : #28b485
+
+
+*/
+
 
 /*  some basic resets    */
 *{
@@ -12,10 +20,19 @@ body{
     font-size: 16px;
     line-height: 1.7;
     color: #777;
+    padding: 30px;
 }
 
 
 .header{
     height: 95vh;
-    background-image: ;
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba(126, 213, 111, 0.8), 
+        rgba(40, 180, 133, 0.80) ),
+        url(../img/hero.jpg);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    /* clip-path: polygon(0 0, 100% 50%, 100% 50%, 0 100%); Tool Clippy website */
 }
