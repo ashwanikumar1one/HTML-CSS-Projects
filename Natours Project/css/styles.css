@@ -58,11 +58,13 @@ body{
     top: 40%; /*  Relation to parent element, That is 'header' here */
     left: 50%; /*  Relation to parent element, That is 'header' here */
     transform: translate(-50%, -50%); /*  Relation to element itself, That is 'header-box' here */
+    text-align: center;
 }
 
 .heading-primary{
     color: #ffffff;
     text-transform: uppercase;
+    margin-bottom: 60px;
 }
 
 .heading-primary-main{
@@ -122,3 +124,77 @@ body{
         transform: translateX(0);
     }
 }
+
+
+.btn:link,
+.btn:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 40px;
+    border-radius: 100px;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0, 0.2);
+}
+
+.btn:active{
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(0,0,0, 0.2);
+}
+
+.btn-white{
+    background-color: #ffffff;
+    color: #777;
+}
+
+
+.btn::after{
+    display: inline-block;
+    content: '';
+    height: 100%;
+    width: 100%;
+    /* padding: 15px 40px; */
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.2s;
+}
+
+.btn-white::after{
+    background-color: white;
+}
+
+
+.btn:hover::after{
+    transform: scaleX(1.5) scaleY(1.6);
+    opacity: 0;
+    
+}
+
+/* .btn::after{
+    display: inline-block;
+    content: 'Hello';
+    background-color: red;
+    height: 100%;
+    width: 100%;
+    color: #ffff;
+    border-radius: 100px;
+    padding: 15px 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+} */
+
+
+
+
+
+/* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /** OffsetX OffsetY Blur color*/
